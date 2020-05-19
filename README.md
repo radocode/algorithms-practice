@@ -1,3 +1,3 @@
-# AlgoCasts
+# algorithms-practice
 
-Companion repo to a course on Udemy.com
+Based on repo to a course on Udemy.com by Stephen Grider
