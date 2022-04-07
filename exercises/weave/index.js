@@ -22,8 +22,18 @@
 //    q.remove() // 2
 //    q.remove() // 'There'
 
-const Queue = require('./queue');
+const Queue = require("./queue");
 
-function weave(sourceOne, sourceTwo) {}
+function weave(sourceOne, sourceTwo) {
+  const q = new Queue();
+
+  // it could be possible that either one of the sources run out of elements,so it needs to be an OR
+  while (sourceOne.peek() || sourceTwo.peek()) {
+    if (sourceOne.peek()) q.add(sourceOne.remove());
+    if (sourceTwo.peek()) q.add(sourceTwo.remove());
+  }
+  // no more elements so we return new q
+  return q;
+}
 
 module.exports = weave;

@@ -14,6 +14,15 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+function pyramid(n) {
+  if (n === 0) return;
+  const levels = Array.from({ length: n }, (_, index) => index + 1);
+  levels.map(level => {
+    const currLevel = new Array(level).fill('');
+    currLevel[Math.ceil(currLevel.length / 2)] = '#';
+    console.log(currLevel);
+  });
+
+}
 
 module.exports = pyramid;
